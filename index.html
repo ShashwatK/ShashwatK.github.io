@@ -9,10 +9,14 @@
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <link rel="canonical" href="https://shashwat.org/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="alternate" type="text/plain" title="LLM-friendly summary" href="/llms.txt">
 
   <!-- Open Graph -->
   <meta property="og:type" content="profile">
@@ -26,8 +30,10 @@
   <meta name="twitter:title" content="Shashwat Kishore">
   <meta name="twitter:description" content="Product builder. Drone pilot. Telecom nerd.">
 
-  <!-- Content Security Policy: static-only, no third-party scripts at M1 -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
+  <!-- Content Security Policy: self + jsdelivr for Material Web Components ESM -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' https://cdn.jsdelivr.net; connect-src https://cdn.jsdelivr.net; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
+
+  <script type="module" src="/scripts/mwc.js"></script>
 
   <script type="application/ld+json">
   {
@@ -47,6 +53,14 @@
       "addressRegion": "CA",
       "addressCountry": "US"
     },
+    "knowsAbout": [
+      "Product Management",
+      "Wi-Fi",
+      "Enterprise Networking",
+      "Telecommunications",
+      "5G",
+      "Drone Photography"
+    ],
     "sameAs": [
       "https://shashwat.org/",
       "https://www.linkedin.com/in/shashwatkishore/",
@@ -74,16 +88,23 @@
         This is a signpost. The real stuff lives on
         <a href="https://shashwat.org/" rel="canonical me">shashwat.org</a>.
       </p>
+      <p>
+        <a class="cta" href="https://shashwat.org/" rel="canonical me">
+          Visit shashwat.org
+          <md-ripple></md-ripple>
+          <md-focus-ring></md-focus-ring>
+        </a>
+      </p>
     </section>
 
     <nav aria-label="Primary links">
       <ul class="links">
-        <li><a href="https://shashwat.org/" rel="me">Main site</a><span> — shashwat.org</span></li>
-        <li><a href="https://www.linkedin.com/in/shashwatkishore/" rel="me">LinkedIn</a><span> — career &amp; work history</span></li>
-        <li><a href="https://github.com/ShashwatK" rel="me">GitHub</a><span> — code</span></li>
-        <li><a href="https://shashwat.org/drone-imagery" rel="me">Drone imagery</a><span> — aerial photography</span></li>
-        <li><a href="https://shashwatkishore.blogspot.com/" rel="me">Blog</a><span> — long-form writing</span></li>
-        <li><a href="https://shashwat.org/contact" rel="me">Contact</a><span> — get in touch</span></li>
+        <li><a href="https://shashwat.org/" rel="me">Main site<md-ripple></md-ripple><md-focus-ring></md-focus-ring></a><span> — shashwat.org</span></li>
+        <li><a href="https://www.linkedin.com/in/shashwatkishore/" rel="me">LinkedIn<md-ripple></md-ripple><md-focus-ring></md-focus-ring></a><span> — career &amp; work history</span></li>
+        <li><a href="https://github.com/ShashwatK" rel="me">GitHub<md-ripple></md-ripple><md-focus-ring></md-focus-ring></a><span> — code</span></li>
+        <li><a href="https://shashwat.org/drone-imagery" rel="me">Drone imagery<md-ripple></md-ripple><md-focus-ring></md-focus-ring></a><span> — aerial photography</span></li>
+        <li><a href="https://shashwatkishore.blogspot.com/" rel="me">Blog<md-ripple></md-ripple><md-focus-ring></md-focus-ring></a><span> — long-form writing</span></li>
+        <li><a href="https://shashwat.org/contact" rel="me">Contact<md-ripple></md-ripple><md-focus-ring></md-focus-ring></a><span> — get in touch</span></li>
       </ul>
     </nav>
 

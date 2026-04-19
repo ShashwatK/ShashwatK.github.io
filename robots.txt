@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+# LLM-friendly summary
+# See: https://shashwatk.github.io/llms.txt
+
 Sitemap: https://shashwatk.github.io/sitemap.xml
