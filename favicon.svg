@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SK">
+  <style>
+    rect { fill: #111111; }
+    text { fill: #ffffff; }
+    @media (prefers-color-scheme: dark) {
+      rect { fill: #f2f2f2; }
+      text { fill: #111111; }
+    }
+  </style>
+  <rect width="64" height="64"/>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central"
+        font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
+        font-weight="700" font-size="30" letter-spacing="-1">SK</text>
+</svg>
